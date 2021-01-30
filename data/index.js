@@ -20,7 +20,14 @@ const productDatabase = async () => {
         const productGallery = new Product({
             name: `${products[i].name}`,
             brand: `${products[i].brand}`,
-            desc: `${product[i].desc}`
+            desc: `${products[i].desc}`,
+            price: `${products[i].price}`,
+            size: `${products[i].size}`,
+            color: `${products[i].color}`,
+            category: `${products[i].category}`,
+            link: `${products[i].link}`,
+            img: `${products[i].img}`,
+            onSale: `${products[i].onSale}`,
         })
         await productGallery.save();
     }

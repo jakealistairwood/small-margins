@@ -8,7 +8,7 @@ module.exports = [
         color: "Black/Marigold Orange",
         category: "Shoes",
         link: "https://www.asics.com/gb/en-gb/gel-kayano-27/p/1011A767-003.html?width=Standard&utm_source=partnerize&utm_medium=affiliate&utm_campaign=2020-AEBAffiliateAO",
-        img: "Gel Kayano.png",
+        img: "img/Gel Kayano.png",
         onSale: false
     },
     {
@@ -20,7 +20,7 @@ module.exports = [
         color: "Nimbus Cloud/ Green Ash",
         category: "Shoes",
         link: "https://www.hokaoneone.eu/de/de/herren-strasse/elevon-2/1106477.html",
-        img: "Elevon.png",
+        img: "img/Elevon.png",
         onSale: true
     },
     {
@@ -32,7 +32,7 @@ module.exports = [
         color: "Dash Grey/ Cloud White/ Solar Red",
         category: "Shoes",
         link: "https://www.adidas.co.uk/galaxar-run-shoes/FX6884.html?cm_mmc=AdieSEM_adMarketplace-_-Native_Search_UK-_-Adidas-_-athletic%20apparel-_-1611390705010300001&cm_mmca1=UK&cm_mmca2=Broad&ds_kid=%7B_dstrackerid%7D&gclid=CLGYhZXSse4CFUNUGwodD7EF8A&gclsrc=ds",
-        img: "Galaxar.png",
+        img: "img/Galaxar.png",
         onSale: false
     },
     {
@@ -44,7 +44,7 @@ module.exports = [
         color: "Sunrise Red/ Black",
         category: "Shoes",
         link: "https://www.asics.com/gb/en-gb/roadblast-tokyo/p/1011B071-600.html?width=Standard&utm_source=partnerize&utm_medium=affiliate&utm_campaign=2020-AEBAffiliateAO",
-        img: "Roadblast Toyko.png",
+        img: "img/Roadblast.png",
         onSale: false
     },
     {
@@ -56,7 +56,7 @@ module.exports = [
         color: "Navy/Red Clay/Gray",
         category: "Shoes",
         link: "https://www.brooksrunning.com/en_gb/adrenaline-gts-21-mens-running-shoes/110349.html?utm_source=rakuten&utm_medium=aff&utm_campaign=uk|-|convert|ecomm|aff|all-products|-&ranMID=44224&ranEAID=TnL5HPStwNw&ranSiteID=TnL5HPStwNw-fx9Iu8HiZpu0a9E1rwhldQ",
-        img: "Adrenaline GTS.png",
+        img: "img/Adrenaline GTS.png",
         onSale: true
     },
     {
@@ -68,7 +68,7 @@ module.exports = [
         color: "White/ Cyber/ Black/ Racer Blue",
         category: "Shoes",
         link: "https://www.nike.com/gb/t/zoomx-vaporfly-next-running-shoe-XhZkH8/AO4568-103",
-        img: "vaporfly.png",
+        img: "img/vaporfly.png",
         onSale: false
     }
 ]

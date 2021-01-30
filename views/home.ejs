@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Small Margins</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 <body>
     <h1>Welcome to Small Margins</h1>
@@ -11,7 +12,11 @@
     <div>
         <% for (let product of products) { %>
             <div>
-                <h1><%= product.name %> </h1>
+                <a href="/products/<%= product._id %> ">
+                    <img src="<%= product.img %>" alt="">
+                </a>
+                <h3><%= product.name %> </h3>
+                <p><%= product.brand %> </p>
                 <p><%= product.desc %> </p>
                 <p>£ <%= product.price %> </p>
             </div>
