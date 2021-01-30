@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap');
+
+$baseFont: 16px;
+$primaryFont: 'Inria Sans', sans-serif;
+
+//CSS Reset 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: $baseFont;
+    font-family: $primaryFont;
+}
+
+.navbar {
+    width: 100%;
+    min-height: 8vh;
+    background-color: transparent;
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        min-height: 8vh;
+        margin: 0 auto;
+
+        ul {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+}
+
+.hero {
+    width: 100%;
+    background-image: url()
+}

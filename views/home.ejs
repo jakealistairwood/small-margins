@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Small Margins</title>
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
-</head>
-<body>
+    <% layout('./layouts/boilerplate') %>
+    <% block('head').append('<link rel="stylesheet" type="text/css" href="css/style.css">') %>
     <h1>Welcome to Small Margins</h1>
     <p>We curate and review all the latest Running equipment to help you reach your next level!</p>
+    <main class="hero">
+        <div class="container">
+            
+        </div>
+    </main>
     <div>
         <% for (let product of products) { %>
             <div>
@@ -22,6 +20,3 @@
             </div>
         <% } %>  
     </div>
-     
-</body>
-</html>
