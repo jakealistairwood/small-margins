@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Inria Sans", sans-serif; }
+
+a, li, button {
+  cursor: pointer; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+.container {
+  width: 80%;
+  margin: 0 auto; }
+
+* {
+  font-size: 16px; }
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase; }
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 500; }
+
+h2 {
+  font-size: 3rem; }
+
+h3 {
+  font-size: 2.5rem; }
+
+h4 {
+  font-size: 2rem; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Inria Sans", sans-serif; }
+
+a, li, button {
+  cursor: pointer; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+.container {
+  width: 80%;
+  margin: 0 auto; }
+
+.navbar {
+  width: 100%;
+  min-height: 8vh;
+  background-color: transparent;
+  position: fixed; }
+  .navbar .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 8vh; }
+    .navbar .container .navbar__links {
+      display: flex;
+      flex-direction: row;
+      align-items: center; }
+      .navbar .container .navbar__links .navbar__link {
+        color: #75746f;
+        padding-right: 20px;
+        transition: 0.3s ease-in; }
+        .navbar .container .navbar__links .navbar__link:hover {
+          color: #FFF; }
+
+body {
+  background-color: black; }

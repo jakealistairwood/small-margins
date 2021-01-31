@@ -1,0 +1,30 @@
+.navbar {
+    width: 100%;
+    min-height: 8vh;
+    background-color: transparent;
+    position: fixed;
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 8vh;
+
+        .navbar__links {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .navbar__link {
+                color: #75746f;
+                padding-right: 20px;
+                transition: 0.3s ease-in;
+
+                &:hover {
+                    color: #FFF;
+                }
+            }
+        }
+    }
+}

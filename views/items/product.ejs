@@ -8,9 +8,14 @@
             <div class="product__container">
                 <h1><%= product.brand %> <%= product.name %></h1>
                 <p><%= product.desc %> </p>
-                <a href="<%= product.link %>">
-                    <button>Buy Now</button>
-                </a>
+                <div>
+                    <a href="<%= product.link %>">
+                        <button>Buy Now</button>
+                    </a>
+                    <a href="/products/<%= product._id %>/edit">
+                        <button>Edit</button>
+                    </a>
+                </div>
             </div>
         </div>
     </main>

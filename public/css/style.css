@@ -1,14 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-size: 16px;
   font-family: "Inria Sans", sans-serif; }
-
-.container {
-  width: 80%;
-  margin: 0 auto; }
 
 a, li, button {
   cursor: pointer; }
@@ -18,6 +17,13 @@ a {
 
 li {
   list-style: none; }
+
+.container {
+  width: 80%;
+  margin: 0 auto; }
+
+* {
+  font-size: 16px; }
 
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase; }
@@ -35,6 +41,26 @@ h3 {
 h4 {
   font-size: 2rem; }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Inria Sans", sans-serif; }
+
+a, li, button {
+  cursor: pointer; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+.container {
+  width: 80%;
+  margin: 0 auto; }
+
 .navbar {
   width: 100%;
   min-height: 8vh;
@@ -46,9 +72,16 @@ h4 {
     justify-content: space-between;
     align-items: center;
     min-height: 8vh; }
-    .navbar .container ul {
+    .navbar .container .navbar__links {
       display: flex;
-      flex-direction: row; }
+      flex-direction: row;
+      align-items: center; }
+      .navbar .container .navbar__links .navbar__link {
+        color: #75746f;
+        padding-right: 20px;
+        transition: 0.3s ease-in; }
+        .navbar .container .navbar__links .navbar__link:hover {
+          color: #FFF; }
 
 .hero {
   width: 100%;
@@ -72,6 +105,9 @@ h4 {
       margin: 20px 0;
       color: #9b9b9b;
       font-weight: 300; }
+      @media screen and (max-width: 500px) {
+        .hero .container p {
+          width: 80%; } }
     .hero .container div {
       position: relative;
       width: 200px;
@@ -114,7 +150,8 @@ h4 {
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-gap: 2em;
   grid-row-gap: 150px;
-  margin-top: 100px; }
+  margin-top: 100px;
+  margin-bottom: 100px; }
   .products .product__grid .product__item {
     display: flex;
     flex-direction: column; }
@@ -131,11 +168,12 @@ h4 {
       margin: 20px 0; }
     .products .product__grid .product__item .product__description {
       width: 80%;
-      font-weight: 300; }
+      font-weight: 300;
+      margin-bottom: 20px; }
     .products .product__grid .product__item .product__footer {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
       margin-top: 20px; }
       .products .product__grid .product__item .product__footer .btn-wrapper .btn-purchase {

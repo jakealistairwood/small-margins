@@ -1,0 +1,26 @@
+@import '../abstracts/variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: $baseFont;
+    font-family: $primaryFont;
+}
+
+a, li, button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
