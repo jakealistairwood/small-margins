@@ -20,7 +20,7 @@ const productDatabase = async () => {
         const productGallery = new Product({
             name: `${products[i].name}`,
             brand: `${products[i].brand}`,
-            desc: `${products[i].desc}`,
+            description: `${products[i].description}`,
             price: `${products[i].price}`,
             size: `${products[i].size}`,
             color: `${products[i].color}`,

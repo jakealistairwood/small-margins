@@ -2,7 +2,7 @@ module.exports = [
     {
         name: "Gel-Kayano 27",
         brand: "Asics",
-        desc: "Enjoy excellent comfort and advanced support with the GEL-KAYANO 27 running shoe. The redesigned mesh upper helps keep feet cool, while the sole is more flexible to help promote a more natural roll through the gait cycle. This process starts in the heel with added flex grooves that isolate the initial impact to force a softer and smoother feeling at footstrike.",
+        description: "Enjoy excellent comfort and advanced support with the GEL-KAYANO 27 running shoe. The redesigned mesh upper helps keep feet cool, while the sole is more flexible to help promote a more natural roll through the gait cycle. This process starts in the heel with added flex grooves that isolate the initial impact to force a softer and smoother feeling at footstrike.",
         price: 150,
         size: ["8", "9", "10", "11"],
         color: "Black/Marigold Orange",
@@ -14,7 +14,7 @@ module.exports = [
     {
         name: "Elevon 2",
         brand: "Hoka One",
-        desc: "Our high-quality Elevon 2 is presented in a new edition with cushioning and a safe running feeling. It offers more support on the mid and forefoot and has been equipped with asymmetrical inner support wings for an individual fit. Also new are the softer cushioning, which ensures comfort when slipping in, and the longer heel section for smoother rolling. The Elevon 2 is a responsive and cushioned shoe in which you can increase the pace or take it slowly to relax.",
+        description: "Our high-quality Elevon 2 is presented in a new edition with cushioning and a safe running feeling. It offers more support on the mid and forefoot and has been equipped with asymmetrical inner support wings for an individual fit. Also new are the softer cushioning, which ensures comfort when slipping in, and the longer heel section for smoother rolling. The Elevon 2 is a responsive and cushioned shoe in which you can increase the pace or take it slowly to relax.",
         price: 160,
         size: ["8", "10", "11"],
         color: "Nimbus Cloud/ Green Ash",
@@ -26,7 +26,7 @@ module.exports = [
     {
         name: "Galaxar Run Shoes",
         brand: "Adidas",
-        desc: "When you first start running, it isn't about PBs or marathons. It's about feeling good, so the miles turn into something you crave. The adidas Galaxar Run Shoes are made with new runners in mind. The seamless mesh upper feels comfortable over the long haul, and the Bounce midsole adds springy cushioning underfoot. This product is made with Primegreen, a series of high-performance recycled materials.",
+        description: "When you first start running, it isn't about PBs or marathons. It's about feeling good, so the miles turn into something you crave. The adidas Galaxar Run Shoes are made with new runners in mind. The seamless mesh upper feels comfortable over the long haul, and the Bounce midsole adds springy cushioning underfoot. This product is made with Primegreen, a series of high-performance recycled materials.",
         price: 70,
         size: ["7", "10"],
         color: "Dash Grey/ Cloud White/ Solar Red",
@@ -38,7 +38,7 @@ module.exports = [
     {
         name: "Roadblast Tokyo", 
         brand: "Asics",
-        desc: "Redefine your running boundaries with the ROADBLAST™ Tokyo performance running shoe. This iteration also features our SUNRISE RED™ colorway to celebrate the city of Tokyo and the country of Japan. Featuring a gender-specific knit pattern that takes on the natural splay of men's and women's foot shapes, this shoe is lightweight and breathable to keep feet comfortable during running workouts. Introducing a blend of FLYTEFOAM Blast™ and AMPLIFOAM™ technologies in the midsole structure to help produce a bouncy energy return, this shoe also helps generate improved comfort. Additionally, the outsole is strategically placed to work with the shape of the midsole to improve propulsion and help create a trampoline effect within your stride.",
+        description: "Redefine your running boundaries with the ROADBLAST™ Tokyo performance running shoe. This iteration also features our SUNRISE RED™ colorway to celebrate the city of Tokyo and the country of Japan. Featuring a gender-specific knit pattern that takes on the natural splay of men's and women's foot shapes, this shoe is lightweight and breathable to keep feet comfortable during running workouts. Introducing a blend of FLYTEFOAM Blast™ and AMPLIFOAM™ technologies in the midsole structure to help produce a bouncy energy return, this shoe also helps generate improved comfort. Additionally, the outsole is strategically placed to work with the shape of the midsole to improve propulsion and help create a trampoline effect within your stride.",
         price: 90,
         size: ["6", "7", "8", "10", "11"],
         color: "Sunrise Red/ Black",
@@ -50,7 +50,7 @@ module.exports = [
     {
         name: "Adrenaline GTS 21",
         brand: "Brooks",
-        desc: "The new men's Adrenaline GTS 21 features extended DNA LOFT plus GuideRails® support – a foolproof recipe for comfort that's custom made for your stride.",
+        description: "The new men's Adrenaline GTS 21 features extended DNA LOFT plus GuideRails® support – a foolproof recipe for comfort that's custom made for your stride.",
         price: 120,
         size: ["8", "11"],
         color: "Navy/Red Clay/Gray",
@@ -62,7 +62,7 @@ module.exports = [
     {
         name: "ZoomX Vaporfly NEXT%",
         brand: "Nike",
-        desc: "The Nike ZoomX Vaporfly NEXT% clears your path to record-breaking speed with a lighter design and faster feel than before. With more cushioning underfoot and reduced weight up top, the result is unprecedented energy return and comfort.",
+        description: "The Nike ZoomX Vaporfly NEXT% clears your path to record-breaking speed with a lighter design and faster feel than before. With more cushioning underfoot and reduced weight up top, the result is unprecedented energy return and comfort.",
         price: 240,
         size: ["11"],
         color: "White/ Cyber/ Black/ Racer Blue",

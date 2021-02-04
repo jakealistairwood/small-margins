@@ -1,5 +1,5 @@
     <% layout('/layouts/boilerplate') %>
-    <% block('head').append('<link rel="stylesheet" type="text/css" href="css/style.css">') %>
+    <% block('head').append('<link rel="stylesheet" type="text/css" href="/css/product.css">') %>
     <main>
         <div class="container">
             <div class="img__container">
@@ -7,7 +7,7 @@
             </div>
             <div class="product__container">
                 <h1><%= product.brand %> <%= product.name %></h1>
-                <p><%= product.desc %> </p>
+                <p><%= product.description %> </p>
                 <p>£<%= product.price %> </p>
                 <div>
                     <a href="<%= product.link %>">

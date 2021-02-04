@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 const ejsMate = require('ejs-mate');
-const sass = require('node-sass-middleware');
+// const sass = require('node-sass-middleware');
 const methodOverride = require('method-override');
 const Product = require('./models/product');
 
@@ -26,15 +26,16 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.urlencoded({ extended: true }));
-app.use(
-    sass({
-        src: __dirname + '/public/scss',
-        dest: __dirname + '/public/css',
-        indentedSyntax: false,
-        debug: true
-    })
-)
-app.use(express.static(path.join(__dirname + "/public/")));
+// app.use(
+//     sass({
+//         src: __dirname + '/public',
+//         dest: __dirname + '/public/css',
+//         indentedSyntax: false,
+//         debug: true,
+//         sourceMap: true
+//     })
+// )
+app.use(express.static(path.join(__dirname + "/public")));
 app.use(methodOverride('_method'));
 
 // CRUD functionality
