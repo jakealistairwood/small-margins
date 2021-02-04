@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 const ejsMate = require('ejs-mate');
+const sass = require('node-sass-middleware');
+const methodOverride = require('method-override');
 const Product = require('./models/product');
 
 mongoose.connect('mongodb://localhost:27017/small-margins', {
@@ -18,16 +20,37 @@ db.once("open", () => {
 
 const app = express();
 
+// Middleware
 app.engine('ejs', ejsMate)
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(__dirname + "/public/"));
+app.use(
+    sass({
+        src: __dirname + '/public/scss',
+        dest: __dirname + '/public/css',
+        indentedSyntax: false,
+        debug: true
+    })
+)
+app.use(express.static(path.join(__dirname + "/public/")));
+app.use(methodOverride('_method'));
 
+// CRUD functionality
 app.get('/', async (req, res) => {
     const products = await Product.find({});
     res.render('home', { products });
+})
+
+app.get('/products/new', async (req, res) => {
+    res.render('items/new');
+})
+
+app.post('/', async (req, res) => {
+    const product = new Product(req.body.product);
+    await product.save();
+    res.redirect(`/products/${product._id}`);
 })
 
 app.get('/products/:id', async (req, res) => {
@@ -41,6 +64,12 @@ app.get('/products/:id/edit', async (req, res) => {
     const product = await Product.findById(id);
     res.render('items/edit', { product })
 });
+
+app.put('/products/:id', async (req, res) => {
+    const { id } = req.params;
+    const product = await Product.findByIdAndUpdate(id, { ... req.body.product });
+    res.redirect(`/products/${product._id}`);
+})
 
 
 // app.put('/products/:id'), async (req, res) => {
