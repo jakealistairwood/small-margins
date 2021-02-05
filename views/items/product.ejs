@@ -9,6 +9,7 @@
                 <h1><%= product.brand %> <%= product.name %></h1>
                 <p><%= product.description %> </p>
                 <p>£<%= product.price %> </p>
+                <p><%= product.size %></p>
                 <div>
                     <a href="<%= product.link %>">
                         <button>Buy Now</button>
@@ -16,6 +17,11 @@
                     <a href="/products/<%= product._id %>/edit">
                         <button>Edit</button>
                     </a>
+                </div>
+                <div class="btn-wrapper">
+                    <form action="/products/<%= product._id %>?_method=DELETE" method="POST">
+                        <button class="btn-delete">Delete</button>
+                    </form>
                 </div>
             </div>
         </div>
