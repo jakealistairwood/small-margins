@@ -1,3 +1,4 @@
+// Shortens paragraph descriptions in gallery grid to keep everything the same height.
 const truncateText = () => {
     let productDescription = document.querySelectorAll('.product__description');
     productDescription.forEach(item => {

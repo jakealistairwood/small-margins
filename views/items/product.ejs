@@ -1,14 +1,19 @@
     <% layout('/layouts/boilerplate') %>
     <% block('head').append('<link rel="stylesheet" type="text/css" href="/css/product.css">') %>
-    <main>
+    <main class="info">
         <div class="container">
             <div class="img__container">
-                <img src="/<%= product.img %>" alt="<%= product.name %>">
+                <img class="product-img" src="/<%= product.img %>" alt="<%= product.name %>">
             </div>
             <div class="product__container">
-                <h1><%= product.brand %> <%= product.name %></h1>
-                <p><%= product.description %> </p>
-                <p>£<%= product.price %> </p>
+                <div class="product__header">
+                    <div>
+                        <h2><%= product.brand %> <%= product.name %></h2>
+                        <p class="product__color"><%= product.color %></p>
+                    </div>
+                    <p class="product__price">£<%= product.price %> </p>
+                </div>
+                <p class="product__description"><%= product.description %> </p>    
                 <p><%= product.size %></p>
                 <div>
                     <a href="<%= product.link %>">
@@ -26,4 +31,5 @@
             </div>
         </div>
     </main>
+    <% block('footer').append('<script src="/js/info.js"></script>')%>
    
