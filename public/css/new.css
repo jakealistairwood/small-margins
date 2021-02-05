@@ -61,11 +61,21 @@ li {
   width: 80%;
   margin: 0 auto; }
 
+.navbar.navbar-active {
+  background-color: white;
+  box-shadow: 0px 5px 1rem rgba(0, 0, 0, 0.1);
+  transition: 0.4s ease-in; }
+  .navbar.navbar-active .container .navbar__links .navbar__link:hover {
+    color: black; }
+  .navbar.navbar-active .container .navbar__icons .img-wrapper .user-icon .svg-stroke {
+    stroke: black; }
+
 .navbar {
   width: 100%;
   min-height: 8vh;
   background-color: transparent;
-  position: fixed; }
+  position: fixed;
+  z-index: 1000; }
   .navbar .container {
     display: flex;
     flex-direction: row;
@@ -98,7 +108,10 @@ h1 {
     text-transform: uppercase;
     font-weight: 700; }
   .form input {
-    height: 50px; }
+    height: 50px;
+    border: none;
+    background-color: #FAFAFA;
+    padding-left: 20px; }
   .form .btn-form {
     width: 100%;
     height: 50px;
@@ -108,3 +121,20 @@ h1 {
     font-weight: 700;
     border: none;
     margin: 30px 0; }
+  .form textarea {
+    padding: 15px;
+    font-weight: 300;
+    border: none;
+    background-color: #FAFAFA; }
+  .form .product-sizes {
+    display: flex;
+    flex-direction: column; }
+    .form .product-sizes h6 {
+      margin-top: 20px;
+      margin-bottom: 10px; }
+    .form .product-sizes div {
+      display: flex;
+      flex-direction: row;
+      align-items: center; }
+      .form .product-sizes div input {
+        margin-right: 20px; }

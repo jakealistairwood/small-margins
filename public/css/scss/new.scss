@@ -20,6 +20,9 @@ h1 {
 
     input {
         height: 50px;
+        border: none;
+        background-color: #FAFAFA;
+        padding-left: 20px;
     }
 
     .btn-form {
@@ -31,5 +34,32 @@ h1 {
         font-weight: 700;
         border: none;
         margin: 30px 0;
+    }
+
+    textarea {
+        padding: 15px;
+        font-weight: 300;
+        border: none;
+        background-color: #FAFAFA;
+    }
+
+    .product-sizes {
+        display: flex;
+        flex-direction: column;
+
+        h6 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            input {
+                margin-right: 20px;
+            }
+        }
     }
 }

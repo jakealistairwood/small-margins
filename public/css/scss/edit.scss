@@ -31,6 +31,8 @@
         
             input {
                 height: 50px;
+                font-weight: 300;
+                padding-left: 15px;
             }
         
             .btn-form {
@@ -42,6 +44,11 @@
                 font-weight: 700;
                 border: none;
                 margin: 30px 0;
+            }
+
+            textarea {
+                padding: 15px;
+                font-weight: 300;
             }
         }
     }

@@ -14,6 +14,14 @@
             <input type="number" id="product-price" name="product[price]" value="<%= product.price %>" required>
             <label for="product-image">Product Image</label>
             <input type="text" id="product-price" name="product[img]" value="<%= product.img %>" required>
+            <label for="product-sizes"></label>
+            <select name="product[size]" id="product-sizes">
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+            </select>
             <button class="btn-form">Update</button>
         </form>
     </div>

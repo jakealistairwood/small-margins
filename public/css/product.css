@@ -61,11 +61,21 @@ li {
   width: 80%;
   margin: 0 auto; }
 
+.navbar.navbar-active {
+  background-color: white;
+  box-shadow: 0px 5px 1rem rgba(0, 0, 0, 0.1);
+  transition: 0.4s ease-in; }
+  .navbar.navbar-active .container .navbar__links .navbar__link:hover {
+    color: black; }
+  .navbar.navbar-active .container .navbar__icons .img-wrapper .user-icon .svg-stroke {
+    stroke: black; }
+
 .navbar {
   width: 100%;
   min-height: 8vh;
   background-color: transparent;
-  position: fixed; }
+  position: fixed;
+  z-index: 1000; }
   .navbar .container {
     display: flex;
     flex-direction: row;
