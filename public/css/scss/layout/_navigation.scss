@@ -4,6 +4,16 @@
     transition: 0.4s ease-in;
 
     .container {
+        .navbar__logo {
+            .stroke {
+                stroke: #3F3F3F;
+            }
+
+            .fill {
+                fill: #3F3F3F;
+            }
+        }
+
         .navbar__links {
             .navbar__link {
                 &:hover {
@@ -36,6 +46,17 @@
         justify-content: space-between;
         align-items: center;
         min-height: 8vh;
+
+        .navbar__logo {
+            .stroke {
+                stroke: #75746f;
+            }
+
+            .fill {
+                fill: #75746f;
+            }
+        }
+
 
         .navbar__links {
             display: flex;

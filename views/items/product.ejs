@@ -19,17 +19,36 @@
                     <a href="<%= product.link %>">
                         <button>Buy Now</button>
                     </a>
+                </div>
+                <div class="admin__control">
                     <a href="/products/<%= product._id %>/edit">
                         <button>Edit</button>
                     </a>
-                </div>
-                <div class="btn-wrapper">
-                    <form action="/products/<%= product._id %>?_method=DELETE" method="POST">
-                        <button class="btn-delete">Delete</button>
-                    </form>
+                    <div class="btn-wrapper">
+                        <form action="/products/<%= product._id %>?_method=DELETE" method="POST">
+                            <button class="btn-delete">Delete</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
+    <article class="reviews">
+        <h3>See What Our Customers Say...</h3>
+        <div class="detail"></div>
+        <section class="reviews__container">
+            <div class="reviews__header">
+                <h4>Reviews</h4>
+                <img src="" alt="">
+            </div>
+            <div class="review__body">
+                <h5 class="review__tagline"></h5>
+                <div class="review__rating">
+                    <p>Submitted by</p>
+                </div>
+                <p class="review__content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non amet expedita quae fugiat saepe iure ipsum facilis? Eaque doloribus nihil earum fugit eum, ut blanditiis, quo aspernatur nesciunt accusantium incidunt.</p>
+            </div>
+        </section>
+    </article>
     <% block('footer').append('<script src="/js/info.js"></script>')%>
    
