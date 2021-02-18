@@ -126,5 +126,25 @@
                 text-transform: uppercase;
             }
         }
+        .review__body {
+            display: flex;
+            flex-direction: column;
+            border-bottom: 1px solid #E8E8E8;
+
+            .review__headline {
+                margin-bottom: 10px;
+            }
+
+            .review__rating {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+
+            .review__content {
+                margin-bottom: 30px;
+            }
+        }
     }
 }

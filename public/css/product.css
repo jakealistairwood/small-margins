@@ -203,3 +203,16 @@ li {
         margin: 30px 0;
         color: #FFF;
         text-transform: uppercase; }
+    .reviews .reviews__container .review__body {
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px solid #E8E8E8; }
+      .reviews .reviews__container .review__body .review__headline {
+        margin-bottom: 10px; }
+      .reviews .reviews__container .review__body .review__rating {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 10px; }
+      .reviews .reviews__container .review__body .review__content {
+        margin-bottom: 30px; }

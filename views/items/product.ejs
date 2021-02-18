@@ -45,7 +45,7 @@
                     <path d="M20 30L40 50L60 30" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>    
             </div>
-            <form action="/products/<%= product._id %>/reviews" method="POST" class="review-form">
+            <form class="review-form" action="/products/<%= product._id %>/reviews" method="POST">
                 <label for="review-rating">Rating: </label>
                 <input name=review[rating] id="review-rating" type="range" min="1" max="5" required>
                 <label for="review-header">Headline</label>
@@ -62,6 +62,9 @@
                     <p>Submitted by</p>
                 </div>
                 <p class="review__content"><%= review.body %></p>
+                <form action="/products/<%= product._id %>/reviews/<%= review._id %>?_method=DELETE" method="POST">
+                    <button class="btn-delete">X</button>
+                </form>
             </div>
             <% } %> 
         </section>
