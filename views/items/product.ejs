@@ -34,20 +34,36 @@
         </div>
     </main>
     <article class="reviews">
-        <h3>See What Our Customers Say...</h3>
-        <div class="detail"></div>
+        <div class="section-header">
+            <h3>See What Our Customers Say...</h3>
+            <div class="detail"></div>
+        </div>
         <section class="reviews__container">
             <div class="reviews__header">
                 <h4>Reviews</h4>
-                <img src="" alt="">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 30L40 50L60 30" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>    
             </div>
+            <form action="/products/<%= product._id %>/reviews" method="POST" class="review-form">
+                <label for="review-rating">Rating: </label>
+                <input name=review[rating] id="review-rating" type="range" min="1" max="5" required>
+                <label for="review-header">Headline</label>
+                <input type="text" name=review[headline] id="review-header" required>
+                <label for="review-body">Your message: </label>
+                <textarea name="review[body]" id="review-body" cols="30" rows="10" required></textarea>
+                <button class="form-btn">Submit Review</button>
+            </form>
+            <% for(let review of product.reviews) { %> 
             <div class="review__body">
-                <h5 class="review__tagline"></h5>
+                <h5 class="review__headline"><%= review.headline %></h5>
                 <div class="review__rating">
+                    <p><%= review.rating %>/5</p>
                     <p>Submitted by</p>
                 </div>
-                <p class="review__content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non amet expedita quae fugiat saepe iure ipsum facilis? Eaque doloribus nihil earum fugit eum, ut blanditiis, quo aspernatur nesciunt accusantium incidunt.</p>
+                <p class="review__content"><%= review.body %></p>
             </div>
+            <% } %> 
         </section>
     </article>
     <% block('footer').append('<script src="/js/info.js"></script>')%>

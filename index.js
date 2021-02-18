@@ -5,6 +5,7 @@ const ejsMate = require('ejs-mate');
 // const sass = require('node-sass-middleware');
 const methodOverride = require('method-override');
 const Product = require('./models/product');
+const Review = require('./models/review');
 
 mongoose.connect('mongodb://localhost:27017/small-margins', {
     useNewUrlParser: true,
@@ -56,14 +57,15 @@ app.post('/', async (req, res) => {
 
 app.get('/products/:id', async (req, res) => {
     const { id } = req.params;
-    const product = await Product.findById(id);
+    const product = await Product.findById(id).populate('reviews');
+    console.log(product);
     res.render('items/product', { product })
 })
 
 app.get('/products/:id/edit', async (req, res) => {
     const { id } = req.params;
     const product = await Product.findById(id);
-    res.render('items/edit', { product })
+    res.render('items/edit', { product });
 });
 
 app.put('/products/:id', async (req, res) => {
@@ -76,6 +78,19 @@ app.delete('/products/:id', async(req, res) => {
     const { id } = req.params;
     await Product.findByIdAndDelete(id);
     res.redirect('/');
+})
+
+app.post('/products/:id/reviews', async(req, res) => {
+    const { id } = req.params;
+    const product = await Product.findById(id);
+    // Create new review for current product
+    const review = new Review(req.body.review);
+    // Push new review onto the reviews object within the product
+    product.reviews.push(review);
+    // Save review and product
+    await review.save();
+    await product.save();
+    res.redirect(`/products/${product._id}`);
 })
 
 app.listen(3000, () => {
