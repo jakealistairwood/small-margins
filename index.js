@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 const ejsMate = require('ejs-mate');
+const catchAsync = require('./utils/catchAsync');
 const session = require('express-session');
 const flash = require('connect-flash');
 const methodOverride = require('method-override');
@@ -74,11 +75,15 @@ app.get('/', async (req, res) => {
     res.render('home', { products });
 })
 
-app.post('/', async (req, res) => {
+app.post('/', catchAsync(async (req, res) => {
     const product = new Product(req.body.product);
     await product.save();
     req.flash('success', 'You have successfully created a new product.');
     res.redirect(`/products/${product._id}`);
+}))
+
+app.use((err, req, res, next) => {
+    res.send("Oh boy")
 })
 
 app.listen(3000, () => {
