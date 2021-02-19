@@ -3,12 +3,14 @@ const path = require('path');
 const mongoose = require('mongoose');
 const ejsMate = require('ejs-mate');
 const session = require('express-session');
-const flash = require('connect-flash');
 const methodOverride = require('method-override');
 const Product = require('./models/product');
-
-const products = require('./routes/products');
-const reviews = require('./routes/reviews');
+const passport = require('passport');
+const LocalStrategy = require('passport-local');
+const User = require('./models/user');
+const userRoutes = require('./routes/users');
+const productRoutes = require('./routes/products');
+const reviewRoutes = require('./routes/reviews');
 
 mongoose.connect('mongodb://localhost:27017/small-margins', {
     useNewUrlParser: true,
@@ -45,16 +47,18 @@ const sessionConfig = {
     }
 }
 app.use(session(sessionConfig));
-// app.use(flash());
 
-// app.use((req, res, next) => {
-//     res.locals.success = req.flash('success');
-//     res.locals.error = req.flash('error');
-//     next();
-// })
+// Passport 
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
-app.use('/products', products);
-app.use('/products/:id/reviews', reviews);
+// Routes pathway
+app.use('/', userRoutes);
+app.use('/products', productRoutes);
+app.use('/products/:id/reviews', reviewRoutes);
 
 // CRUD functionality
 app.get('/', async (req, res) => {
