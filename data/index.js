@@ -18,6 +18,7 @@ const productDatabase = async () => {
     await Product.deleteMany({}); 
     for (let i = 0; i < products.length; i++) {
         const productGallery = new Product({
+            author: '602ff90909568e2fc9da7f40',
             name: `${products[i].name}`,
             brand: `${products[i].brand}`,
             description: `${products[i].description}`,

@@ -2,8 +2,9 @@ const express = require('express');
 const router = express.Router({ mergeParams: true }); 
 const Product = require('../models/product');
 const Review = require('../models/review');
+const {isLoggedIn} = require('../middleware');
 
-router.post('/', async(req, res) => {
+router.post('/', isLoggedIn, async(req, res) => {
     const { id } = req.params;
     const product = await Product.findById(id);
     // Create new review for current product
@@ -17,7 +18,7 @@ router.post('/', async(req, res) => {
     res.redirect(`/products/${product._id}`);
 })
 
-router.delete('/:reviewId', async(req, res) => {
+router.delete('/:reviewId', isLoggedIn, async(req, res) => {
     const { id, reviewId } = req.params;
     await Product.findByIdAndUpdate(id, { $pull: { reviews: reviewId } });
     await Review.findByIdAndDelete(reviewId);

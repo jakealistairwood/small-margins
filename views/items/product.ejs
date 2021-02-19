@@ -20,6 +20,7 @@
                         <button>Buy Now</button>
                     </a>
                 </div>
+                <% if(currentUser && product.author.equals(currentUser._id)) { %> 
                 <div class="admin__control">
                     <a href="/products/<%= product._id %>/edit">
                         <button>Edit</button>
@@ -30,6 +31,7 @@
                         </form>
                     </div>
                 </div>
+                <% } %> 
             </div>
         </div>
     </main>

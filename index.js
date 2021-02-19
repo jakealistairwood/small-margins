@@ -3,6 +3,7 @@ const path = require('path');
 const mongoose = require('mongoose');
 const ejsMate = require('ejs-mate');
 const catchAsync = require('./utils/catchAsync');
+const ExpressError = require('./utils/ExpressError');
 const session = require('express-session');
 const flash = require('connect-flash');
 const methodOverride = require('method-override');
@@ -52,6 +53,8 @@ app.use(session(sessionConfig));
 app.use(flash());
 
 app.use((req, res, next) => {
+    // Global variables
+    res.locals.currentUser = req.user;
     res.locals.success = req.flash('success');
     res.locals.error = req.flash('error');
     next();
@@ -70,20 +73,27 @@ app.use('/products', productRoutes);
 app.use('/products/:id/reviews', reviewRoutes);
 
 // CRUD functionality
-app.get('/', async (req, res) => {
+app.get('/', catchAsync(async (req, res) => {
     const products = await Product.find({});
     res.render('home', { products });
-})
+}))
 
 app.post('/', catchAsync(async (req, res) => {
     const product = new Product(req.body.product);
+    product.author = req.user._id;
     await product.save();
     req.flash('success', 'You have successfully created a new product.');
     res.redirect(`/products/${product._id}`);
 }))
 
+app.all('*', (req, res, next) => {
+    next(new ExpressError('Page Not Found', 404));
+})
+
 app.use((err, req, res, next) => {
-    res.send("Oh boy")
+    const { statusCode = 500 } = err;
+    if(!err.message) err.message = "Something Went Wrong!"
+    res.status(statusCode).render('error', {err});
 })
 
 app.listen(3000, () => {

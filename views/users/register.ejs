@@ -1,4 +1,5 @@
 <% layout('layouts/boilerplate') %> 
+<% block('head').append('<link rel="stylesheet" type="text/css" href="/css/main.css">') %>
 <h1>Register</h1>
 <form class="register-form" action="/register" method="POST">
     <label for="user-email">Your email: </label>

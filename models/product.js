@@ -17,6 +17,10 @@ const ProductSchema = new Schema({
     link: String,
     img: String,
     onSale: Boolean,
+    author: {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+    },
     reviews: [
         {
             type: Schema.Types.ObjectId,
