@@ -47,6 +47,7 @@
                     <path d="M20 30L40 50L60 30" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>    
             </div>
+            <% if(currentUser) { %> 
             <form class="review-form" action="/products/<%= product._id %>/reviews" method="POST">
                 <label for="review-rating">Rating: </label>
                 <input name=review[rating] id="review-rating" type="range" min="1" max="5" required>
@@ -56,17 +57,27 @@
                 <textarea name="review[body]" id="review-body" cols="30" rows="10" required></textarea>
                 <button class="form-btn">Submit Review</button>
             </form>
+            <% } else { %>
+            <div class="review-signin">
+                <p>Please sign in to create a review</p>
+                <a href="/login">
+                    <button>Sign In</button>
+                </a>
+            </div>
+            <% } %>  
             <% for(let review of product.reviews) { %> 
             <div class="review__body">
                 <h5 class="review__headline"><%= review.headline %></h5>
                 <div class="review__rating">
                     <p><%= review.rating %>/5</p>
-                    <p>Submitted by</p>
+                    <p>Submitted by <%= review.author.username %></p>
                 </div>
                 <p class="review__content"><%= review.body %></p>
+                <% if(currentUser && review.author.equals(currentUser._id)) { %> 
                 <form action="/products/<%= product._id %>/reviews/<%= review._id %>?_method=DELETE" method="POST">
                     <button class="btn-delete">X</button>
                 </form>
+                <% } %> 
             </div>
             <% } %> 
         </section>

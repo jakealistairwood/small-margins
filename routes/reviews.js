@@ -9,6 +9,7 @@ router.post('/', isLoggedIn, async(req, res) => {
     const product = await Product.findById(id);
     // Create new review for current product
     const review = new Review(req.body.review);
+    review.author = req.user._id;
     // Push new review onto the reviews object within the product
     product.reviews.push(review);
     // Save review and product

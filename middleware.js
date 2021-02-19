@@ -1,3 +1,5 @@
+const Product = require('./models/product');
+
 module.exports.isLoggedIn = (req, res, next) => {
     if(!req.isAuthenticated()) {
         req.session.returnTo = req.originalUrl;

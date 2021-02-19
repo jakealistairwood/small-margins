@@ -52,6 +52,13 @@ const sessionConfig = {
 app.use(session(sessionConfig));
 app.use(flash());
 
+// Passport 
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
 app.use((req, res, next) => {
     // Global variables
     res.locals.currentUser = req.user;
@@ -59,13 +66,6 @@ app.use((req, res, next) => {
     res.locals.error = req.flash('error');
     next();
 })
-
-// Passport 
-app.use(passport.initialize());
-app.use(passport.session());
-passport.use(new LocalStrategy(User.authenticate()));
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
 
 // Routes pathway
 app.use('/', userRoutes);

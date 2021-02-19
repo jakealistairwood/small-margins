@@ -10,7 +10,12 @@ router.get('/new', isLoggedIn, catchAsync(async (req, res) => {
 
 router.get('/:id', catchAsync(async (req, res) => {
     const { id } = req.params;
-    const product = await Product.findById(id).populate('reviews');
+    const product = await Product.findById(id).populate({
+        path: 'reviews', 
+        populate: {
+            path: 'author'
+        }
+    });
     if(!product) {
         req.flash('error', 'Sorry, we were unable to find the item you are looking for.')
         return res.redirect('/');
