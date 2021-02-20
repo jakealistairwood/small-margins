@@ -71,7 +71,8 @@ li {
   height: 3px;
   background-color: #EDEDED; }
 
-.flash-success {
+.flash-success,
+.flash-error {
   display: flex;
   position: absolute;
   top: 8vh;
@@ -82,7 +83,8 @@ li {
   color: #FFF;
   height: 5vh;
   width: 100%;
-  padding: 0 10vh; }
+  padding: 0 10vh;
+  margin-bottom: 100px; }
 
 .navbar.navbar-active {
   background-color: white;

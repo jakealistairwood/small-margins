@@ -2,9 +2,10 @@ const express = require('express');
 const router = express.Router({ mergeParams: true }); 
 const Product = require('../models/product');
 const Review = require('../models/review');
-const {isLoggedIn} = require('../middleware');
+const {isLoggedIn, isReviewAuthor} = require('../middleware');
+const catchAsync = require('../utils/catchAsync');
 
-router.post('/', isLoggedIn, async(req, res) => {
+router.post('/', isLoggedIn, catchAsync(async(req, res) => {
     const { id } = req.params;
     const product = await Product.findById(id);
     // Create new review for current product
@@ -17,14 +18,14 @@ router.post('/', isLoggedIn, async(req, res) => {
     await product.save();
     req.flash('success', 'Thank you, your review has successfully been submitted.')
     res.redirect(`/products/${product._id}`);
-})
+}))
 
-router.delete('/:reviewId', isLoggedIn, async(req, res) => {
+router.delete('/:reviewId', isLoggedIn, isReviewAuthor, catchAsync(async(req, res) => {
     const { id, reviewId } = req.params;
     await Product.findByIdAndUpdate(id, { $pull: { reviews: reviewId } });
     await Review.findByIdAndDelete(reviewId);
     req.flash('success', 'Your review has been successfully deleted.')
     res.redirect(`/products/${id}`);
-})
+}))
 
 module.exports = router;
