@@ -1,13 +1,13 @@
 <% if(success && success.length) { %> 
-<div class="flash-success" role="alert">
+<div class="flash-success flash-message" role="alert">
     <p><%= success %></p>
-    <button>&times;</button>
+    <button class="flash-btn">&times;</button>
 </div>
 <% } %> 
 
 <% if(error && error.length) { %>
-    <div class="flash-error" role="alert">
+    <div class="flash-error flash-message" role="alert">
         <p><%= error %></p>
-        <button>&times;</button>
+        <button class="flash-btn">&times;</button>
     </div>    
 <% } %> 

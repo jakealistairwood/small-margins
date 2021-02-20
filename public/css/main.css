@@ -71,6 +71,9 @@ li {
   height: 3px;
   background-color: #EDEDED; }
 
+.hidden.flash-message {
+  display: none; }
+
 .flash-success,
 .flash-error {
   display: flex;
