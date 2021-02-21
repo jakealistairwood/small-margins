@@ -10,7 +10,7 @@ const openModal = () => {
 
 const closeModal = () => {
     modal.classList.add('hidden');
-    modal.classList.add('hidden');
+    overlay.classList.add('hidden');
 }
 
 // Event Listeners to allow user to open/close modal
@@ -20,7 +20,7 @@ overlay.addEventListener('click', closeModal);
 
 // Close Modal if User hits escape
 document.addEventListener('keydown', (event) => {
-    if(event === 'Escape') {
+    if(event.key === 'Escape') {
         closeModal();
     }
 })
