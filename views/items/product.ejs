@@ -49,29 +49,9 @@
                 </svg>    
             </div>
             <% if(currentUser) { %> 
-            <form class="review-form" action="/products/<%= product._id %>/reviews" method="POST">
-                <!-- <label for="review-rating">Rating: </label>
-                <input name="review[rating]" id="review-rating" type="range" min="1" max="5" required> -->
-                <fieldset class="starability-basic">
-                    <legend>Your Rating: </legend>
-                    <input type="radio" id="no-rate" class="input-no-rate" name="review[rating]" value="0" checked aria-label="No rating." />
-                    <input type="radio" id="first-rate1" name="review[rating]" value="1" />
-                    <label for="first-rate1" title="Terrible">1 star</label>
-                    <input type="radio" id="first-rate2" name="review[rating]" value="2" />
-                    <label for="first-rate2" title="Not good">2 stars</label>
-                    <input type="radio" id="first-rate3" name="review[rating]" value="3" />
-                    <label for="first-rate3" title="Average">3 stars</label>
-                    <input type="radio" id="first-rate4" name="review[rating]" value="4" />
-                    <label for="first-rate4" title="Very good">4 stars</label>
-                    <input type="radio" id="first-rate5" name="review[rating]" value="5" />
-                    <label for="first-rate5" title="Amazing">5 stars</label>
-                </fieldset>
-                <label for="review-header">Headline</label>
-                <input type="text" name=review[headline] id="review-header" required>
-                <label for="review-body">Your message: </label>
-                <textarea name="review[body]" id="review-body" cols="30" rows="10" required></textarea>
-                <button class="form-btn">Submit Review</button>
-            </form>
+            <div class="review-message">
+                <button class="open-modal">Write Your Review</button>
+            </div>
             <% } else { %>
             <div class="review-signin">
                 <p>Please sign in to create a review</p>
@@ -79,7 +59,7 @@
                     <button>Sign In</button>
                 </a>
             </div>
-            <% } %>  
+            <% } %>
             <% for(let review of product.reviews) { %> 
             <div class="review__body">
                 <h5 class="review__headline"><%= review.headline %></h5>
@@ -101,6 +81,35 @@
             </div>
             <% } %> 
         </section>
+        <div class="modal hidden">
+            <form class="review-form" action="/products/<%= product._id %>/reviews" method="POST">
+                <div class="form-header">
+                    <h4>Write A Review</h4>
+                    <button class="close-form">&times;</button>
+                </div>
+                <fieldset class="starability-basic">
+                    <legend>Your Rating: </legend>
+                    <input type="radio" id="no-rate" class="input-no-rate" name="review[rating]" value="0" checked aria-label="No rating." />
+                    <input type="radio" id="first-rate1" name="review[rating]" value="1" />
+                    <label for="first-rate1" title="Terrible">1 star</label>
+                    <input type="radio" id="first-rate2" name="review[rating]" value="2" />
+                    <label for="first-rate2" title="Not good">2 stars</label>
+                    <input type="radio" id="first-rate3" name="review[rating]" value="3" />
+                    <label for="first-rate3" title="Average">3 stars</label>
+                    <input type="radio" id="first-rate4" name="review[rating]" value="4" />
+                    <label for="first-rate4" title="Very good">4 stars</label>
+                    <input type="radio" id="first-rate5" name="review[rating]" value="5" />
+                    <label for="first-rate5" title="Amazing">5 stars</label>
+                </fieldset>
+                <label for="review-header">Headline</label>
+                <input type="text" name=review[headline] id="review-header" required>
+                <label for="review-body">Your message: </label>
+                <textarea name="review[body]" id="review-body" cols="30" rows="10" required></textarea>
+                <button class="form-btn">Submit Review</button>
+            </form> 
+        </div>
+        <div class="overlay hidden"></div>
     </article>
     <% block('footer').append('<script src="/js/info.js"></script>')%>
+    <% block('footer').append('<script src="/js/modal.js"></script>')%>
    
