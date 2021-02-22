@@ -61,20 +61,66 @@
             font-size: 1.2rem;
             line-height: 30px;
         }
+
+        a {
+            margin: 30px 0;
+
+            .primary-btn {
+                width: 130px;
+                height: 50px;
+            }
+        }
+
+        .admin__control {
+            display: flex;
+            flex-direction: column;
+            border-top: 1px solid #E8E8E8;
+            border-bottom: 1px solid #E8E8E8;
+            padding: 40px 0;
+
+            h4 {
+                margin-bottom: 20px;
+            }
+
+            div {
+                display: flex;
+                flex-direction: row;
+
+                .btn-edit,
+                .btn-delete {
+                border: none;
+                height: 50px;
+                width: 130px;
+                text-transform: uppercase;
+                transition: 0.3s ease-in;
+
+                    &:hover {
+                    background-color: $primaryBlack;
+                    color: $white;
+                    }
+                }
+
+                .btn-edit {
+                    margin-right: 15px;
+                }
+            }
+        }
     }
 }
 
 .reviews {
     width: 100%;
+    margin-bottom: 200px;
 
     .section-header {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 100%;
 
         h3 {
-            margin-top: 50px;
+            margin-top: 150px;
             margin-bottom: 40px;
         }
     }
@@ -92,16 +138,46 @@
             align-items: center;
             border-bottom: 1px solid #E8E8E8;
             margin-top: 100px;
+
+            .reviews-toggle {
+                cursor: pointer;
+            }
         }
 
-        
+        .review-signin {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            border-bottom: 1px solid #E8E8E8;
+
+            p {
+                text-transform: uppercase;
+            }
+
+            a {
+                margin: 30px 0;
+                padding-left: 20px;
+
+                .primary-btn {
+                    height: 40px;
+                    width: 110px;
+                }
+            }
+        }
+
+        .hide {
+            display: none!important;
+        }
+
         .review__body {
             display: flex;
             flex-direction: column;
             border-bottom: 1px solid #E8E8E8;
 
             .review__headline {
+                margin-top: 20px;
                 margin-bottom: 10px;
+                font-size: 1.3rem;
             }
 
             .review__rating {
@@ -109,10 +185,18 @@
                 flex-direction: row;
                 align-items: center;
                 margin-bottom: 10px;
+
+                .review__author {
+                    padding-left: 20px;
+                    color: #a4a4a4;
+                    letter-spacing: 0.05em;
+                }
             }
 
             .review__content {
+                margin-top: 15px;
                 margin-bottom: 30px;
+                font-weight: 300;
             }
         }
     }
@@ -132,12 +216,29 @@
         border-radius: 5px;
         width: 50%;
         margin: 0 auto;
-        padding: 20px;
+        padding: 50px;
 
         .review-form {
             display: flex;
             flex-direction: column;
             margin: 30px 0;
+
+            .form-header {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                .close-form {
+                    background-color: $primaryBlack;
+                    color: $white;
+                    width: 30px;
+                    height: 30px;
+                    border: none;
+                    border-radius: 50%;
+                    font-size: 1.5rem;
+                }
+            }
 
             input {
                 background-color: #FAFAFA;
@@ -176,7 +277,7 @@
     }
 
     .overlay {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         height: 100%;

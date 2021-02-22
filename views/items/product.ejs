@@ -15,21 +15,22 @@
                     <p class="product__price">£<%= product.price %> </p>
                 </div>
                 <p class="product__description"><%= product.description %> </p>    
-                <p><%= product.size %></p>
-                <div>
-                    <a href="<%= product.link %>">
-                        <button>Buy Now</button>
-                    </a>
-                </div>
+                <p>Sizes Available: <%= product.size %></p>
+                <a href="<%= product.link %>">
+                    <button class="primary-btn">Buy Now</button>
+                </a>
                 <% if(currentUser && product.author.equals(currentUser._id)) { %> 
                 <div class="admin__control">
-                    <a href="/products/<%= product._id %>/edit">
-                        <button>Edit</button>
-                    </a>
-                    <div class="btn-wrapper">
-                        <form action="/products/<%= product._id %>?_method=DELETE" method="POST">
-                            <button class="btn-delete">Delete</button>
-                        </form>
+                    <h4>Admin Control</h4>
+                    <div>
+                        <a href="/products/<%= product._id %>/edit">
+                            <button class="btn-edit">Edit</button>
+                        </a>
+                        <div class="btn-wrapper">
+                            <form action="/products/<%= product._id %>?_method=DELETE" method="POST">
+                                <button class="btn-delete">Delete</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
                 <% } %> 
@@ -44,7 +45,7 @@
         <section class="reviews__container">
             <div class="reviews__header">
                 <h4>Reviews</h4>
-                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="reviews-toggle" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M20 30L40 50L60 30" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>    
             </div>
@@ -56,21 +57,18 @@
             <div class="review-signin">
                 <p>Please sign in to create a review</p>
                 <a href="/login">
-                    <button>Sign In</button>
+                    <button class="primary-btn">Sign In</button>
                 </a>
             </div>
             <% } %>
             <% for(let review of product.reviews) { %> 
-            <div class="review__body">
+            <div class="review__body hide">
                 <h5 class="review__headline"><%= review.headline %></h5>
                 <div class="review__rating">
-                    <div>
-                        <!-- <h3>Rated element name</h3> -->
-                        <p class="starability-result" data-rating="<%= review.rating %>">
-                            Rated: <%= review.rating %> stars
-                        </p>
-                    </div>
-                    <p>Submitted by <%= review.author.username %></p>
+                    <p class="starability-result" data-rating="<%= review.rating %>">
+                        Rated: <%= review.rating %> stars
+                    </p>
+                    <p class="review__author">Submitted by <%= review.author.username %></p>
                 </div>
                 <p class="review__content"><%= review.body %></p>
                 <% if(currentUser && review.author.equals(currentUser._id)) { %> 
@@ -110,6 +108,7 @@
         </div>
         <div class="overlay hidden"></div>
     </article>
+    <% block('footer').append('<script src="/js/product.js"></script>')%>
     <% block('footer').append('<script src="/js/info.js"></script>')%>
     <% block('footer').append('<script src="/js/modal.js"></script>')%>
    

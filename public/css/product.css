@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -70,6 +71,18 @@ li {
   width: 80px;
   height: 3px;
   background-color: #EDEDED; }
+
+.primary-btn {
+  background-color: transparent;
+  color: black;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 3px solid black;
+  transition: 0.2s ease-in; }
+  .primary-btn:hover {
+    background-color: #3F3F3F;
+    border: 3px solid #3F3F3F;
+    color: #FFF; }
 
 .hidden.flash-message {
   display: none; }
@@ -173,16 +186,47 @@ li {
     .container .product__container .product__description {
       font-size: 1.2rem;
       line-height: 30px; }
+    .container .product__container a {
+      margin: 30px 0; }
+      .container .product__container a .primary-btn {
+        width: 130px;
+        height: 50px; }
+    .container .product__container .admin__control {
+      display: flex;
+      flex-direction: column;
+      border-top: 1px solid #E8E8E8;
+      border-bottom: 1px solid #E8E8E8;
+      padding: 40px 0; }
+      .container .product__container .admin__control h4 {
+        margin-bottom: 20px; }
+      .container .product__container .admin__control div {
+        display: flex;
+        flex-direction: row; }
+        .container .product__container .admin__control div .btn-edit,
+        .container .product__container .admin__control div .btn-delete {
+          border: none;
+          height: 50px;
+          width: 130px;
+          text-transform: uppercase;
+          transition: 0.3s ease-in; }
+          .container .product__container .admin__control div .btn-edit:hover,
+          .container .product__container .admin__control div .btn-delete:hover {
+            background-color: #3F3F3F;
+            color: #FFF; }
+        .container .product__container .admin__control div .btn-edit {
+          margin-right: 15px; }
 
 .reviews {
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 200px; }
   .reviews .section-header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    width: 100%; }
     .reviews .section-header h3 {
-      margin-top: 50px;
+      margin-top: 150px;
       margin-bottom: 40px; }
   .reviews .reviews__container {
     display: flex;
@@ -196,19 +240,44 @@ li {
       align-items: center;
       border-bottom: 1px solid #E8E8E8;
       margin-top: 100px; }
+      .reviews .reviews__container .reviews__header .reviews-toggle {
+        cursor: pointer; }
+    .reviews .reviews__container .review-signin {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      border-bottom: 1px solid #E8E8E8; }
+      .reviews .reviews__container .review-signin p {
+        text-transform: uppercase; }
+      .reviews .reviews__container .review-signin a {
+        margin: 30px 0;
+        padding-left: 20px; }
+        .reviews .reviews__container .review-signin a .primary-btn {
+          height: 40px;
+          width: 110px; }
+    .reviews .reviews__container .hide {
+      display: none !important; }
     .reviews .reviews__container .review__body {
       display: flex;
       flex-direction: column;
       border-bottom: 1px solid #E8E8E8; }
       .reviews .reviews__container .review__body .review__headline {
-        margin-bottom: 10px; }
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 1.3rem; }
       .reviews .reviews__container .review__body .review__rating {
         display: flex;
         flex-direction: row;
         align-items: center;
         margin-bottom: 10px; }
+        .reviews .reviews__container .review__body .review__rating .review__author {
+          padding-left: 20px;
+          color: #a4a4a4;
+          letter-spacing: 0.05em; }
       .reviews .reviews__container .review__body .review__content {
-        margin-bottom: 30px; }
+        margin-top: 15px;
+        margin-bottom: 30px;
+        font-weight: 300; }
   .reviews .hidden {
     display: none; }
   .reviews .modal {
@@ -223,11 +292,24 @@ li {
     border-radius: 5px;
     width: 50%;
     margin: 0 auto;
-    padding: 20px; }
+    padding: 50px; }
     .reviews .modal .review-form {
       display: flex;
       flex-direction: column;
       margin: 30px 0; }
+      .reviews .modal .review-form .form-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center; }
+        .reviews .modal .review-form .form-header .close-form {
+          background-color: #3F3F3F;
+          color: #FFF;
+          width: 30px;
+          height: 30px;
+          border: none;
+          border-radius: 50%;
+          font-size: 1.5rem; }
       .reviews .modal .review-form input {
         background-color: #FAFAFA;
         font-weight: 300;
@@ -255,7 +337,7 @@ li {
         text-transform: uppercase;
         margin-top: 30px; }
   .reviews .overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100%;

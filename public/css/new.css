@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -70,6 +71,18 @@ li {
   width: 80px;
   height: 3px;
   background-color: #EDEDED; }
+
+.primary-btn {
+  background-color: transparent;
+  color: black;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 3px solid black;
+  transition: 0.2s ease-in; }
+  .primary-btn:hover {
+    background-color: #3F3F3F;
+    border: 3px solid #3F3F3F;
+    color: #FFF; }
 
 .hidden.flash-message {
   display: none; }
