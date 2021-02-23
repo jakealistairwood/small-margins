@@ -145,11 +145,33 @@
             }
         }
 
+        .review-message {
+            padding: 30px 0;
+            border-bottom: 1px solid #E8E8E8;
+
+            .open-modal {
+                border: none;
+                background-color: transparent;
+                text-transform: uppercase;
+                font-weight: 700;
+                color: black;
+                font-size: 1.1rem;
+                border-bottom: 1px dashed $primaryBlack;
+                transition: 0.2s ease-in;
+
+                &:hover {
+                    color:rgba(0, 0, 0, 0.3);
+                    border-bottom: 1px dashed rgba(0, 0, 0, 0.3);
+                }
+            }
+        }
+
         .review-signin {
             display: flex;
             flex-direction: row;
             align-items: center;
             border-bottom: 1px solid #E8E8E8;
+            padding: 30px 0;
 
             p {
                 text-transform: uppercase;
@@ -221,47 +243,31 @@
         .review-form {
             display: flex;
             flex-direction: column;
-            margin: 30px 0;
 
             .form-header {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
+                margin-bottom: 20px;
 
-                .close-form {
+                .close-modal {
                     background-color: $primaryBlack;
                     color: $white;
-                    width: 30px;
-                    height: 30px;
+                    width: 35px;
+                    height: 35px;
                     border: none;
                     border-radius: 50%;
                     font-size: 1.5rem;
                 }
             }
-
+            
             input {
-                background-color: #FAFAFA;
-                font-weight: 300;
-                height: 50px;
-                border: none;
                 margin-bottom: 30px;
             }
 
-            label {
-                font-weight: 700;
-                margin-bottom: 20px;
-                text-transform: uppercase;
-            }
-
-            textarea {
-                width: 100%;
-                resize: vertical;
+            textarea {            
                 min-height: 60px;
-                background-color: #FAFAFA;
-                border: none;
-                padding: 20px;
-                font-weight: 300;
             }
 
             .form-btn {

@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -122,6 +123,49 @@ li {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 999; }
+
+label {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: 700; }
+
+input {
+  background-color: #FAFAFA;
+  color: #3F3F3F;
+  font-weight: 300;
+  padding-left: 20px;
+  border: none;
+  min-height: 50px; }
+
+textarea {
+  padding: 20px;
+  font-weight: 300;
+  border: none;
+  background-color: #FAFAFA;
+  width: 100%;
+  resize: vertical; }
+
+legend {
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 10px; }
+
+.form {
+  min-height: 50vh;
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; }
+  .form .btn-form {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: none;
+    margin: 30px 0; }
 
 .navbar.navbar-active {
   background-color: white;
@@ -263,11 +307,27 @@ li {
       margin-top: 100px; }
       .reviews .reviews__container .reviews__header .reviews-toggle {
         cursor: pointer; }
+    .reviews .reviews__container .review-message {
+      padding: 30px 0;
+      border-bottom: 1px solid #E8E8E8; }
+      .reviews .reviews__container .review-message .open-modal {
+        border: none;
+        background-color: transparent;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: black;
+        font-size: 1.1rem;
+        border-bottom: 1px dashed #3F3F3F;
+        transition: 0.2s ease-in; }
+        .reviews .reviews__container .review-message .open-modal:hover {
+          color: rgba(0, 0, 0, 0.3);
+          border-bottom: 1px dashed rgba(0, 0, 0, 0.3); }
     .reviews .reviews__container .review-signin {
       display: flex;
       flex-direction: row;
       align-items: center;
-      border-bottom: 1px solid #E8E8E8; }
+      border-bottom: 1px solid #E8E8E8;
+      padding: 30px 0; }
       .reviews .reviews__container .review-signin p {
         text-transform: uppercase; }
       .reviews .reviews__container .review-signin a {
@@ -315,39 +375,25 @@ li {
     padding: 50px; }
     .reviews .modal .review-form {
       display: flex;
-      flex-direction: column;
-      margin: 30px 0; }
+      flex-direction: column; }
       .reviews .modal .review-form .form-header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center; }
-        .reviews .modal .review-form .form-header .close-form {
+        align-items: center;
+        margin-bottom: 20px; }
+        .reviews .modal .review-form .form-header .close-modal {
           background-color: #3F3F3F;
           color: #FFF;
-          width: 30px;
-          height: 30px;
+          width: 35px;
+          height: 35px;
           border: none;
           border-radius: 50%;
           font-size: 1.5rem; }
       .reviews .modal .review-form input {
-        background-color: #FAFAFA;
-        font-weight: 300;
-        height: 50px;
-        border: none;
         margin-bottom: 30px; }
-      .reviews .modal .review-form label {
-        font-weight: 700;
-        margin-bottom: 20px;
-        text-transform: uppercase; }
       .reviews .modal .review-form textarea {
-        width: 100%;
-        resize: vertical;
-        min-height: 60px;
-        background-color: #FAFAFA;
-        border: none;
-        padding: 20px;
-        font-weight: 300; }
+        min-height: 60px; }
       .reviews .modal .review-form .form-btn {
         width: 100%;
         border: none;

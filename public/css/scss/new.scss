@@ -1,64 +1,43 @@
 @import './main.scss';
 
-h1 {
-    text-align: center;
+.navbar {
+    background-color: black;
 }
 
-.form {
-    min-height: 50vh;
-    width: 50%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+.admin-control {
+    height: 100vh;
+    width: 100%;
 
-    label {
-        margin-top: 20px;
-        margin-bottom: 10px;
-        text-transform: uppercase;
-        font-weight: 700;
-    }
-
-    input {
-        height: 50px;
-        border: none;
-        background-color: #FAFAFA;
-        padding-left: 20px;
-    }
-
-    .btn-form {
-        width: 100%;
-        height: 50px;
-        background-color: black;
-        color: white;
-        text-transform: uppercase;
-        font-weight: 700;
-        border: none;
-        margin: 30px 0;
-    }
-
-    textarea {
-        padding: 15px;
-        font-weight: 300;
-        border: none;
-        background-color: #FAFAFA;
-    }
-
-    .product-sizes {
+    .container {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-        h6 {
-            margin-top: 20px;
-            margin-bottom: 10px;
+        h1 {
+            text-align: center;
+            margin-top: 100px;
         }
 
-        div {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-
-            input {
-                margin-right: 20px;
+        .form {
+            .product-sizes {
+                display: flex;
+                flex-direction: column;
+        
+                h6 {
+                    margin-top: 20px;
+                    margin-bottom: 10px;
+                }
+        
+                div {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+        
+                    input {
+                        margin-right: 20px;
+                    }
+                }
             }
         }
     }

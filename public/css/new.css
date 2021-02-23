@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -123,6 +124,42 @@ li {
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 999; }
 
+input {
+  background-color: #FAFAFA;
+  color: #3F3F3F;
+  font-weight: 300;
+  padding-left: 20px;
+  border: none;
+  min-height: 50px; }
+
+label {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: 700; }
+
+textarea {
+  padding: 20px;
+  font-weight: 300;
+  border: none;
+  background-color: #FAFAFA; }
+
+.form {
+  min-height: 50vh;
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; }
+  .form .btn-form {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: none;
+    margin: 30px 0; }
+
 .navbar.navbar-active {
   background-color: white;
   box-shadow: 0px 5px 1rem rgba(0, 0, 0, 0.1);
@@ -163,48 +200,29 @@ li {
         .navbar .container .navbar__links .navbar__link:hover {
           color: #FFF; }
 
-h1 {
-  text-align: center; }
+.navbar {
+  background-color: black; }
 
-.form {
-  min-height: 50vh;
-  width: 50%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column; }
-  .form label {
-    margin-top: 20px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    font-weight: 700; }
-  .form input {
-    height: 50px;
-    border: none;
-    background-color: #FAFAFA;
-    padding-left: 20px; }
-  .form .btn-form {
-    width: 100%;
-    height: 50px;
-    background-color: black;
-    color: white;
-    text-transform: uppercase;
-    font-weight: 700;
-    border: none;
-    margin: 30px 0; }
-  .form textarea {
-    padding: 15px;
-    font-weight: 300;
-    border: none;
-    background-color: #FAFAFA; }
-  .form .product-sizes {
+.admin-control {
+  height: 100vh;
+  width: 100%; }
+  .admin-control .container {
     display: flex;
-    flex-direction: column; }
-    .form .product-sizes h6 {
-      margin-top: 20px;
-      margin-bottom: 10px; }
-    .form .product-sizes div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .admin-control .container h1 {
+      text-align: center;
+      margin-top: 100px; }
+    .admin-control .container .form .product-sizes {
       display: flex;
-      flex-direction: row;
-      align-items: center; }
-      .form .product-sizes div input {
-        margin-right: 20px; }
+      flex-direction: column; }
+      .admin-control .container .form .product-sizes h6 {
+        margin-top: 20px;
+        margin-bottom: 10px; }
+      .admin-control .container .form .product-sizes div {
+        display: flex;
+        flex-direction: row;
+        align-items: center; }
+        .admin-control .container .form .product-sizes div input {
+          margin-right: 20px; }
