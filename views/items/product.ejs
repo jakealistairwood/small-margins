@@ -83,7 +83,7 @@
             <form class="review-form" action="/products/<%= product._id %>/reviews" method="POST">
                 <div class="form-header">
                     <h4>Write A Review</h4>
-                    <button class="close-form">&times;</button>
+                    <button class="close-modal">&times;</button>
                 </div>
                 <fieldset class="starability-basic">
                     <legend>Your Rating: </legend>
@@ -111,4 +111,5 @@
     <% block('footer').append('<script src="/js/product.js"></script>')%>
     <% block('footer').append('<script src="/js/info.js"></script>')%>
     <% block('footer').append('<script src="/js/modal.js"></script>')%>
+
    

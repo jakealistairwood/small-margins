@@ -1,7 +1,7 @@
 const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const openModalBtn = document.querySelector('.open-modal');
-const closeFormBtn = document.querySelector('.close-form');
+const closeModalBtn = document.querySelector('.close-modal');
 
 const openModal = () => {
     modal.classList.remove('hidden');
@@ -15,7 +15,7 @@ const closeModal = () => {
 
 // Event Listeners to allow user to open/close modal
 openModalBtn.addEventListener('click', openModal);
-closeFormBtn.addEventListener('click', closeModal);
+closeModalBtn.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
 
 // Close Modal if User hits escape

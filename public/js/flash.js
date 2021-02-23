@@ -1,6 +1,10 @@
-const flashMessage = document.querySelector('.flash-message');
-const closeFlashMessage = document.querySelector('.flash-btn');
+const flashModal = document.querySelector('.flash-modal');
+const closeFlashBtn = document.querySelector('.close-flash');
 
-closeFlashMessage.addEventListener('click', () => {
-    flashMessage.classList.add('hidden');
-})
+const closeFlash = () => {
+    flashModal.classList.add('hidden');
+    overlay.classList.add('hidden');
+}
+
+closeFlashBtn.addEventListener('click', closeFlash);
+overlay.addEventListener('click', closeFlash);

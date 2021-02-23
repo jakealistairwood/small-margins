@@ -1,3 +1,5 @@
+// mongodb+srv//sm-admin:<password>@cluster0.y5zzv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
