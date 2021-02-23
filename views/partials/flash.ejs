@@ -1,19 +1,19 @@
 <% if(success && success.length) { %> 
 <!-- <div class="flash-success flash-message" role="alert"> -->
     <div class="flash-modal" role="alert">
-        <p><%= success %></p>
+        <h4><%= success %></h4>
         <button class="close-flash">Close</button>
     </div>
-    <div class="overlay"></div>
+    <div class="flash-overlay"></div>
 <% } %> 
 
 <% if(error && error.length) { %>
 <!-- <div class="flash-error flash-message" role="alert"> -->
     <div class="flash-modal" role="alert">
-        <p><%= error %></p>
+        <h4><%= error %></h4>
         <button class="close-flash">Close</button>
     </div>    
-    <div class="overlay"></div>
+    <div class="flash-overlay"></div>
 <% } %> 
 <% block('footer').append('<script src="/js/flash.js"></script>')%>
 
