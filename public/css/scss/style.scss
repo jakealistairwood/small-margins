@@ -71,9 +71,19 @@
         justify-content: center;
         align-items: center;
 
+        @media screen and (max-width: 500px) {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+
         h2 {
             margin-top: 100px;
             margin-bottom: 30px;
+
+            @media screen and (max-width: 500px) {
+                text-align: center;
+            }
         }
 
         .detail {
@@ -89,6 +99,10 @@
         grid-row-gap: 150px;
         margin-top: 100px;
         margin-bottom: 100px;
+
+        @media screen and (max-width: 500px) {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
 
         .product__item {
             display: flex;

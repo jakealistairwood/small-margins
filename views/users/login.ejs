@@ -1,10 +1,12 @@
 <% layout('layouts/boilerplate') %> 
 <% block('head').append('<link rel="stylesheet" type="text/css" href="/css/main.css">') %>
-<h1>Login</h1>
-<form class="auth-form" action="/login" method="POST">
-    <label for="username">Your username: </label>
-    <input type="text" id="username" name="username" required>
-    <label for="user-password">Your password:</label>
-    <input type="password" id="user-password" name="password" required>
-    <button>Login</button>
-</form>
+<main class="auth">
+    <form class="auth-form" action="/login" method="POST">
+        <h1>Login</h1>
+        <label for="username">Your username: </label>
+        <input type="text" id="username" name="username" required>
+        <label for="user-password">Your password:</label>
+        <input type="password" id="user-password" name="password" required>
+        <button class="btn-form">Login</button>
+    </form>
+</main>

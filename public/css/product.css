@@ -167,6 +167,27 @@ legend {
     border: none;
     margin: 30px 0; }
 
+.auth {
+  width: 80%;
+  margin: 0 auto; }
+  .auth .auth-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto; }
+    .auth .auth-form h1 {
+      text-align: center;
+      margin-top: 100px; }
+  .auth .btn-form {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: none;
+    margin: 30px 0; }
+
 .navbar.navbar-active {
   background-color: white;
   box-shadow: 0px 5px 1rem rgba(0, 0, 0, 0.1);
@@ -215,6 +236,10 @@ legend {
 .container {
   display: flex;
   flex-direction: row; }
+  @media screen and (max-width: 500px) {
+    .container {
+      display: flex;
+      flex-direction: column; } }
   .container .img__container {
     display: flex;
     align-items: flex-start;
@@ -222,6 +247,14 @@ legend {
     width: 40%;
     min-height: 500px;
     margin-top: 200px; }
+    @media screen and (max-width: 500px) {
+      .container .img__container {
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+        min-height: 200px;
+        margin-top: 70px;
+        background-color: red; } }
     .container .img__container .product-img {
       width: 100%; }
   .container .product__container {
@@ -230,19 +263,35 @@ legend {
     width: 40%;
     margin: 0 auto;
     margin-top: 200px; }
+    @media screen and (max-width: 500px) {
+      .container .product__container {
+        margin-top: 20px;
+        width: 100%; } }
     .container .product__container .product__header {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 40px; }
+      @media screen and (max-width: 500px) {
+        .container .product__container .product__header {
+          display: flex;
+          flex-direction: column;
+          align-items: center; } }
       .container .product__container .product__header div {
         display: flex;
         flex-direction: column; }
+        @media screen and (max-width: 500px) {
+          .container .product__container .product__header div h2 {
+            font-size: 1.8;
+            text-align: center; } }
         .container .product__container .product__header div p {
           font-size: 1rem;
           margin: 10px 0;
           opacity: 0.3; }
+          @media screen and (max-width: 500px) {
+            .container .product__container .product__header div p {
+              margin-bottom: 20px; } }
       .container .product__container .product__header .product__price {
         font-size: 1.5rem;
         font-weight: 700;
@@ -358,6 +407,13 @@ legend {
         margin-top: 15px;
         margin-bottom: 30px;
         font-weight: 300; }
+      .reviews .reviews__container .review__body .btn-delete {
+        border: none;
+        height: 40px;
+        width: 130px;
+        text-transform: uppercase;
+        transition: 0.3s ease-in;
+        margin-bottom: 20px; }
   .reviews .hidden {
     display: none; }
   .reviews .modal {

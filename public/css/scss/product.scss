@@ -10,6 +10,11 @@
     display: flex;
     flex-direction: row;
 
+    @media screen and (max-width: 500px) {
+        display: flex;
+        flex-direction: column;
+    }
+
     .img__container {
         display: flex;
         align-items: flex-start;
@@ -17,6 +22,15 @@
         width: 40%;
         min-height: 500px;
         margin-top: 200px;
+
+        @media screen and (max-width: 500px) {
+            display: flex;
+            align-items: flex-start;
+            width: 100%;
+            min-height: 200px;
+            margin-top: 70px;
+            background-color: red;
+        }
 
         .product-img {
             width: 100%;
@@ -30,6 +44,11 @@
         margin: 0 auto;
         margin-top: 200px;
 
+        @media screen and (max-width: 500px) {
+            margin-top: 20px;
+            width: 100%;
+        }
+
         .product__header {
             display: flex;
             flex-direction: row;
@@ -38,14 +57,31 @@
             // margin-top: 100px;
             margin-bottom: 40px;
 
+            @media screen and (max-width: 500px) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
             div {
                 display: flex;
                 flex-direction: column;
+
+                h2 {
+                    @media screen and (max-width: 500px) {
+                        font-size: 1.8;
+                        text-align: center;
+                    }
+                }
                 
                 p {
                     font-size: 1rem;
                     margin: 10px 0;
                     opacity: 0.3;
+
+                    @media screen and (max-width: 500px) {
+                        margin-bottom: 20px;
+                    }
                 }
             }
 
@@ -220,6 +256,15 @@
                 margin-bottom: 30px;
                 font-weight: 300;
             }
+
+            .btn-delete {
+                border: none;
+                height: 40px;
+                width: 130px;
+                text-transform: uppercase;
+                transition: 0.3s ease-in;
+                margin-bottom: 20px;
+            }
         }
     }
     .hidden {
@@ -261,7 +306,7 @@
                     font-size: 1.5rem;
                 }
             }
-            
+
             input {
                 margin-bottom: 30px;
             }
