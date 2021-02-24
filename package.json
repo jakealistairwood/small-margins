@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "node-sass public/css/scss -o public/css",
-    "sass-watch": "npm run sass && npm run sass -- -w"
+    "sass-watch": "npm run sass && npm run sass -- -w",
+    "start": "node index.js"
   },
   "author": "Jake Wood",
   "license": "ISC",
