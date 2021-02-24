@@ -1,4 +1,6 @@
-// mongodb+srv//sm-admin:<password>@cluster0.y5zzv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+if(process.env.NODE_ENV !== "production") {
+    require('dotenv').config()
+}
 
 const express = require('express');
 const path = require('path');
@@ -17,10 +19,15 @@ const userRoutes = require('./routes/users');
 const productRoutes = require('./routes/products');
 const reviewRoutes = require('./routes/reviews');
 
-mongoose.connect('mongodb://localhost:27017/small-margins', {
+const MongoDBStore = require('connect-mongo')(session);
+
+const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/small-margins';
+
+mongoose.connect(dbUrl, {
     useNewUrlParser: true,
     useCreateIndex: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useFindAndModify: false
 })
 
 const db = mongoose.connection;
@@ -40,9 +47,24 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname + "/public")));
 app.use(methodOverride('_method'));
 
+const secret = process.env.SECRET || 'thisisasecret';
+
+const store = new MongoDBStore({
+    url: dbUrl,
+    secret,
+    // touchAfter in this case means that the session will only be updated once in 24hrs and not continuously when the user refreshes the page.
+    touchAfter: 24 * 60 * 60
+})
+
+store.on('error', function(e) {
+    console.log("Session Store Error", e)
+})
+
 // Set up session cookie
 const sessionConfig = {
-    secret: 'thisisasecret',
+    store,
+    name: 'session',
+    secret,
     resave: false,
     saveUninitialized: true,
     cookie: {
