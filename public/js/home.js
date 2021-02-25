@@ -1,3 +1,13 @@
+// Close Cookie Message
+const message = document.querySelector('.cookie-message');
+const cookieBtn = document.querySelector('.cookie-btn');
+
+const closeMessage = () => {
+    message.classList.add('hidden');
+}
+
+cookieBtn.addEventListener('click', closeMessage);
+
 // Shortens paragraph descriptions in gallery grid to keep everything the same height.
 const truncateText = () => {
     let productDescription = document.querySelectorAll('.product__description');

@@ -1,9 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -188,45 +194,72 @@ legend {
     border: none;
     margin: 30px 0; }
 
-.navbar.navbar-active {
-  background-color: white;
-  box-shadow: 0px 5px 1rem rgba(0, 0, 0, 0.1);
-  transition: 0.4s ease-in; }
-  .navbar.navbar-active .container .navbar__logo .stroke {
-    stroke: #3F3F3F; }
-  .navbar.navbar-active .container .navbar__logo .fill {
-    fill: #3F3F3F; }
-  .navbar.navbar-active .container .navbar__links .navbar__link:hover {
-    color: black; }
-  .navbar.navbar-active .container .navbar__icons .img-wrapper .user-icon .svg-stroke {
-    stroke: black; }
-
 .navbar {
-  width: 100%;
-  min-height: 8vh;
-  background-color: transparent;
-  position: fixed;
-  z-index: 1000; }
-  .navbar .container {
+  display: flex;
+  flex-direction: column;
+  width: 100%; }
+  .navbar .navbar__top .container,
+  .navbar .navbar__bottom .container {
+    width: 80%;
+    margin: 0 auto;
+    height: 7vh; }
+  .navbar .navbar__top .container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    min-height: 8vh; }
-    .navbar .container .navbar__logo .stroke {
-      stroke: #75746f; }
-    .navbar .container .navbar__logo .fill {
-      fill: #75746f; }
-    .navbar .container .navbar__links {
+    align-items: center; }
+    .navbar .navbar__top .container .navbar__items {
       display: flex;
       flex-direction: row;
       align-items: center; }
-      .navbar .container .navbar__links .navbar__link {
-        color: #75746f;
-        padding-right: 20px;
-        transition: 0.3s ease-in; }
-        .navbar .container .navbar__links .navbar__link:hover {
-          color: #FFF; }
+    .navbar .navbar__top .container a {
+      color: #3F3F3F; }
+      .navbar .navbar__top .container a .navbar-btn {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        border: 2px solid #3F3F3F;
+        width: 100px;
+        height: 30px;
+        margin-left: 20px; }
+  .navbar .navbar__bottom {
+    background-color: #3F3F3F;
+    width: 100%; }
+    .navbar .navbar__bottom .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; }
+      .navbar .navbar__bottom .container .navbar__links {
+        display: flex;
+        flex-direction: row; }
+        .navbar .navbar__bottom .container .navbar__links .navbar__link {
+          font-family: "IBM Plex Sans Condensed", sans-serif;
+          font-size: 14px;
+          color: #FFF;
+          padding-right: 20px;
+          letter-spacing: 0.03em; }
+
+.cookie-message {
+  position: absolute;
+  top: 14vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+  width: 100%;
+  background-color: #e5e5e5;
+  font-size: 14px;
+  font-weight: 300; }
+  .cookie-message .cookie-btn {
+    border: 1px solid #3F3F3F;
+    background-color: transparent;
+    width: 100px;
+    height: 30px;
+    margin-left: 20px; }
 
 .hero {
   width: 100%;
