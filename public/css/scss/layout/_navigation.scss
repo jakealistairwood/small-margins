@@ -29,7 +29,7 @@
 
             a {
                 color: $primaryBlack;
-                
+
                 .navbar-btn {
                     display: flex;
                     flex-direction: row;
@@ -40,6 +40,12 @@
                     width: 100px;
                     height: 30px;
                     margin-left: 20px;
+                    transition: 0.3s ease-in;
+
+                    &:hover {
+                        background-color: $primaryBlack;
+                        color: $white;
+                    }
                 }
             }
         }
@@ -48,6 +54,12 @@
     .navbar__bottom {
         background-color: $primaryBlack;
         width: 100%;
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+
+        @media screen and (max-width: 500px) {
+            position: absolute;
+            top: 7vh;
+        }
 
         .container { 
             display: flex;
@@ -58,6 +70,11 @@
             .navbar__links {
                 display: flex;
                 flex-direction: row;
+
+                @media screen and (max-width: 500px) {
+                    display: flex;
+                    flex-direction: column;
+                }
 
                 .navbar__link {
                     font-family: $navbarFont;

@@ -1,6 +1,6 @@
 <% layout('/layouts/boilerplate') %>
-<% block('head').append('<link rel="stylesheet" type="text/css" href="/css/edit.css">') %>
-<main class="admin-control">
+<% block('head').append('<link rel="stylesheet" type="text/css" href="/css/main.css">') %>
+<main class="admin-form">
     <div class="container">
         <h1>Edit Item</h1>
         <form class="form" action="/products/<%= product._id %>?_method=PUT" method="POST">

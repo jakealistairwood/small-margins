@@ -1,0 +1,38 @@
+.admin-form {
+    height: 100vh;
+    width: 100%;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .form {
+            .product-sizes {
+                display: flex;
+                flex-direction: column;
+        
+                h6 {
+                    margin-top: 20px;
+                    margin-bottom: 10px;
+                }
+        
+                div {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+        
+                    input {
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -13,6 +13,10 @@
     font-size: 14px;
     font-weight: 300;
 
+    @media screen and (max-width: 500px) {
+        display: none;
+    }
+
     .cookie-btn {
         border: 1px solid $primaryBlack;
         background-color: transparent;
@@ -23,11 +27,16 @@
 }
 
 .hero {
-    width: 100%;
-    height: 100vh;
+    width: 90%;
+    height: 86vh;
     background-image: url('/img/hero-img.svg');
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 0 auto;
+
+    @media screen and (max-width: 500px) {
+        width: 100%;
+    }
 
     .container {
         display: flex;
@@ -111,7 +120,13 @@
         .detail {
             margin-bottom: 30px;
         }
-    }  
+    }
+
+    .product__grid.container {
+        @media screen and (max-width: 500px) {
+            width: 90%;
+        }
+    }
 
     .product__grid {
         display: grid;
