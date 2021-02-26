@@ -1,15 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -194,6 +200,50 @@ legend {
     border: none;
     margin: 30px 0; }
 
+.footer {
+  background-color: #3F3F3F;
+  padding: 30px 0; }
+  .footer .container .footer-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #737373;
+    padding-bottom: 40px;
+    margin-bottom: 20px; }
+    .footer .container .footer-nav .footer-middle {
+      display: flex;
+      flex-direction: row; }
+      .footer .container .footer-nav .footer-middle ul a {
+        color: #737373;
+        text-transform: uppercase;
+        transition: 0.3s ease-in; }
+        .footer .container .footer-nav .footer-middle ul a:hover {
+          color: #FFF; }
+        .footer .container .footer-nav .footer-middle ul a li {
+          margin: 10px 0; }
+      .footer .container .footer-nav .footer-middle .links-left {
+        padding-right: 50px; }
+      .footer .container .footer-nav .footer-middle .links-right {
+        padding-left: 50px; }
+  .footer .container .footer-copyright {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #737373; }
+    .footer .container .footer-copyright div {
+      display: flex;
+      flex-direction: row;
+      align-items: center; }
+      .footer .container .footer-copyright div p {
+        padding-left: 20px; }
+    .footer .container .footer-copyright .footer-dot {
+      width: 5px;
+      height: 5px;
+      background-color: #737373;
+      border-radius: 50%;
+      margin: 0 20px; }
+
 .navbar {
   display: flex;
   flex-direction: column;
@@ -266,3 +316,54 @@ legend {
     .admin-form .container h1 {
       text-align: center;
       margin-top: 100px; }
+
+.admin-form {
+  height: 100vh;
+  width: 100%; }
+  .admin-form .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .admin-form .container h1 {
+      text-align: center;
+      margin-top: 100px; }
+    .admin-form .container .form .product-sizes {
+      display: flex;
+      flex-direction: column; }
+      .admin-form .container .form .product-sizes h6 {
+        margin-top: 20px;
+        margin-bottom: 10px; }
+      .admin-form .container .form .product-sizes div {
+        display: flex;
+        flex-direction: row;
+        align-items: center; }
+        .admin-form .container .form .product-sizes div input {
+          margin-right: 20px; }
+
+.admin-control {
+  width: 100%; }
+  .admin-control h1 {
+    text-align: center;
+    margin-top: 100px; }
+  .admin-control .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center; }
+    .admin-control .container .link-wrapper {
+      position: relative;
+      background-color: #e5e5e5;
+      min-width: 300px;
+      width: 30%;
+      height: 350px;
+      margin: 0 auto;
+      margin-top: 100px;
+      padding: 30px;
+      color: #3F3F3F; }
+      .admin-control .container .link-wrapper .control-link {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%; }
