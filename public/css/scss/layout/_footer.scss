@@ -1,7 +1,13 @@
 .footer {
+    position: relative;
+    width: 100%;
+    bottom: 0;
     background-color: $primaryBlack;
     padding: 30px 0;
-    .container {
+    .footer__container {
+        width: 80%;
+        margin: 0 auto;
+        
         .footer-nav {
             display: flex;
             flex-direction: row;
