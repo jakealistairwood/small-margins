@@ -175,7 +175,11 @@ legend {
   width: 50%;
   margin: 0 auto;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  margin-top: 50px; }
+  @media screen and (max-width: 768px) {
+    .form {
+      width: 80%; } }
   .form .btn-form {
     width: 100%;
     height: 50px;
@@ -188,15 +192,37 @@ legend {
 
 .auth {
   width: 80%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  min-height: 100%; }
   .auth .auth-form {
     display: flex;
     flex-direction: column;
     width: 50%;
     margin: 0 auto; }
+    @media screen and (max-width: 1024px) {
+      .auth .auth-form {
+        width: 70%; } }
+    @media screen and (max-width: 768px) {
+      .auth .auth-form {
+        width: 80%; } }
+    @media screen and (max-width: 400px) {
+      .auth .auth-form {
+        width: 90%; } }
     .auth .auth-form h1 {
       text-align: center;
       margin-top: 100px; }
+    .auth .auth-form p {
+      font-size: 1.5rem;
+      font-weight: 300;
+      text-align: center;
+      margin: 20px 0; }
+    .auth .auth-form .btn-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: center; }
+      .auth .auth-form .btn-wrapper .primary-btn {
+        width: 130px;
+        height: 40px; }
   .auth .btn-form {
     width: 100%;
     height: 50px;
@@ -319,7 +345,6 @@ legend {
           letter-spacing: 0.03em; }
 
 .admin-form {
-  width: 100%;
   margin-bottom: 100px; }
   .admin-form .container {
     display: flex;
@@ -385,6 +410,10 @@ legend {
 .container {
   display: flex;
   flex-direction: row; }
+  @media screen and (max-width: 768px) {
+    .container {
+      width: 90%;
+      margin: 0 auto; } }
   @media screen and (max-width: 500px) {
     .container {
       display: flex;
@@ -412,6 +441,9 @@ legend {
     width: 40%;
     margin: 0 auto;
     margin-top: 100px; }
+    @media screen and (max-width: 768px) {
+      .container .product__container {
+        width: 50%; } }
     @media screen and (max-width: 500px) {
       .container .product__container {
         margin-top: 20px;
@@ -422,6 +454,12 @@ legend {
       justify-content: space-between;
       align-items: center;
       margin-bottom: 40px; }
+      @media screen and (max-width: 768px) {
+        .container .product__container .product__header {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          margin-bottom: 20px; } }
       @media screen and (max-width: 500px) {
         .container .product__container .product__header {
           display: flex;
@@ -430,9 +468,15 @@ legend {
       .container .product__container .product__header div {
         display: flex;
         flex-direction: column; }
+        @media screen and (max-width: 768px) {
+          .container .product__container .product__header div {
+            margin-bottom: 10px; } }
+        @media screen and (max-width: 768px) {
+          .container .product__container .product__header div h2 {
+            font-size: 1.8rem; } }
         @media screen and (max-width: 500px) {
           .container .product__container .product__header div h2 {
-            font-size: 1.8;
+            font-size: 1.8rem;
             text-align: center; } }
         .container .product__container .product__header div p {
           font-size: 1rem;
@@ -446,9 +490,18 @@ legend {
         font-weight: 700;
         border: 3px solid black;
         padding: 10px 20px; }
+        @media screen and (max-width: 768px) {
+          .container .product__container .product__header .product__price {
+            border: none;
+            padding: 0; } }
     .container .product__container .product__description {
       font-size: 1.2rem;
-      line-height: 30px; }
+      line-height: 30px;
+      margin-bottom: 20px; }
+      @media screen and (max-width: 768px) {
+        .container .product__container .product__description {
+          text-align: justify;
+          font-size: .9rem; } }
     .container .product__container a .primary-btn {
       width: 130px;
       height: 50px;
@@ -496,6 +549,9 @@ legend {
     flex-direction: column;
     width: 50%;
     margin: 0 auto; }
+    @media screen and (max-width: 768px) {
+      .reviews .reviews__container {
+        width: 80%; } }
     .reviews .reviews__container .reviews__header {
       display: flex;
       flex-direction: row;
@@ -578,6 +634,9 @@ legend {
     width: 50%;
     margin: 0 auto;
     padding: 50px; }
+    @media screen and (max-width: 768px) {
+      .reviews .modal {
+        width: 80%; } }
     .reviews .modal .review-form {
       display: flex;
       flex-direction: column; }

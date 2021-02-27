@@ -35,6 +35,11 @@ legend {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    margin-top: 50px;
+
+    @media screen and (max-width: 768px) {
+        width: 80%;
+    }
 
     .btn-form {
         width: 100%;
@@ -51,6 +56,7 @@ legend {
 .auth {
     width: 80%;
     margin: 0 auto;
+    min-height: 100%;
 
     .auth-form {
         display: flex;
@@ -58,10 +64,40 @@ legend {
         width: 50%;
         margin: 0 auto;
 
+        @media screen and (max-width: 1024px) {
+            width: 70%;
+        }
+
+        @media screen and (max-width: 768px) {
+            width: 80%;
+        }
+
+        @media screen and (max-width: 400px) {
+            width: 90%;
+        }
+
         h1 {
             text-align: center;
             margin-top: 100px;
         }
+
+        p {
+            font-size: 1.5rem;
+            font-weight: 300;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .btn-wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            .primary-btn {
+                width: 130px;
+                height: 40px;
+            }
+        } 
     }
 
     .btn-form {

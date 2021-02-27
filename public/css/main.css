@@ -175,7 +175,11 @@ legend {
   width: 50%;
   margin: 0 auto;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  margin-top: 50px; }
+  @media screen and (max-width: 768px) {
+    .form {
+      width: 80%; } }
   .form .btn-form {
     width: 100%;
     height: 50px;
@@ -188,15 +192,37 @@ legend {
 
 .auth {
   width: 80%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  min-height: 100%; }
   .auth .auth-form {
     display: flex;
     flex-direction: column;
     width: 50%;
     margin: 0 auto; }
+    @media screen and (max-width: 1024px) {
+      .auth .auth-form {
+        width: 70%; } }
+    @media screen and (max-width: 768px) {
+      .auth .auth-form {
+        width: 80%; } }
+    @media screen and (max-width: 400px) {
+      .auth .auth-form {
+        width: 90%; } }
     .auth .auth-form h1 {
       text-align: center;
       margin-top: 100px; }
+    .auth .auth-form p {
+      font-size: 1.5rem;
+      font-weight: 300;
+      text-align: center;
+      margin: 20px 0; }
+    .auth .auth-form .btn-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: center; }
+      .auth .auth-form .btn-wrapper .primary-btn {
+        width: 130px;
+        height: 40px; }
   .auth .btn-form {
     width: 100%;
     height: 50px;
@@ -319,7 +345,6 @@ legend {
           letter-spacing: 0.03em; }
 
 .admin-form {
-  width: 100%;
   margin-bottom: 100px; }
   .admin-form .container {
     display: flex;
